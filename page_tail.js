@@ -1,4 +1,3 @@
-    <script type="text/javascript">
     $(function() {
     var converter = new Showdown.converter();
     $("#cnblogs_post_body").html(converter.makeHtml($.trim($("#cnblogs_post_body").html())));
@@ -18,4 +17,3 @@
     $("#myIEWarning").hide();
     }
     });
-    </script>
