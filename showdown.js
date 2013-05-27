@@ -64,10 +64,15 @@ var Showdown={extensions:{}},forEach=Showdown.forEach=function(a,b){if(typeof a.
 
 //from now on, add our function
 $(function() {
+	String.prototype.replaceAll  = function(s1,s2){    
+		return this.replace(new RegExp(s1,"gm"),s2);    
+	}; 
+
     var converter = new Showdown.converter();
     //$("#cnblogs_post_body").html(converter.makeHtml($.trim($("#cnblogs_post_body").html())));
     $("#cnblogs_post_body p").each(function() {
 		var $$ = $(this);
-		$$.replaceWith(converter.makeHtml($$.html().replace("<br>", "\n").replace("<br />", "\n")));
+		$$.replaceWith(converter.makeHtml($$.html().replaceAll("<br>", "\n")
+			.replaceAll("<br />", "\n").replaceAll("&gt;", ">")));
     });
 });
