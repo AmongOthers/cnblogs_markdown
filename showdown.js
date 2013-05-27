@@ -68,6 +68,6 @@ $(function() {
     //$("#cnblogs_post_body").html(converter.makeHtml($.trim($("#cnblogs_post_body").html())));
     $("#cnblogs_post_body p").each(function() {
 		var $$ = $(this);
-		$$.html(converter.makeHtml($$.html().replace("<br>", "\n")));
+		$$.replaceWith(converter.makeHtml($$.html().replace("<br>", "\n")));
     });
 });
