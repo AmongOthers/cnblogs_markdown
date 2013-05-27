@@ -81,4 +81,4 @@ $(function() {
     } else {
     $("#myIEWarning").hide();
     }
-}
+});
