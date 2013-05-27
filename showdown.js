@@ -75,7 +75,7 @@ $(function() {
 		$$.replaceWith(converter.makeHtml($$.html().replaceAll("<br>", "\n")
 			.replaceAll("<br />", "\n").replaceAll("&gt;", ">")));
     });
-    $("#post_con p").each(function() {
+    $("#postCon p").each(function() {
 		var $$ = $(this);
 		$$.replaceWith(converter.makeHtml($$.html().replaceAll("<br>", "\n")
 			.replaceAll("<br />", "\n").replaceAll("&gt;", ">")));
